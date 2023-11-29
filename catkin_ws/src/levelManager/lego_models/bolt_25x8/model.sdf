@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<sdf version="1.4">
+  <model name="bolt_25x8">
+    <static>false</static>
+    <link name="link">
+      <pose>0 0 0 1.4 0 0</pose>
+      <inertial>
+        <pose>-1e-10 8.764e-07 0.0232502943 0 0 0</pose>
+        <mass>1.3e-06</mass>
+        <inertia>
+          <ixx>4.60827461384e-09</ixx>
+          <ixy>1.436e-17</ixy>
+          <ixz>2.99287013e-12</ixz>
+          <iyy>4.60849541019e-09</iyy>
+          <iyz>-1.2976397e-13</iyz>
+          <izz>5.8248750545e-10</izz>
+        </inertia>
+      </inertial>
+
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://bolt_25x8/meshes/bolt_25x8.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Green</name>
+          </script>
+        </material>
+      </visual>
+
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <uri>model://bolt_25x8/meshes/bolt_25x8.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>

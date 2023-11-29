@@ -162,6 +162,7 @@ include_directories(
 catkin_install_python(PROGRAMS
   scripts/levelManager.py
   scripts/costruzioniParser.py
+  scripts/take_photo.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

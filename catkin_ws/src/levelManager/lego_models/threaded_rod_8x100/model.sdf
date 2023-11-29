@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<sdf version="1.4"> 
+         <model name="threaded_rod_8x100"> 
+             <static>true</static> 
+             <link name="link"> 
+                 <pose>0 0 0 0 0 0</pose> 
+                 <inertial> 
+                     <pose>3.9968e-06 -0.0 0.0999964777 0 0 0 </pose> 
+                     <mass>3e-05</mass> 
+                     <inertia> 
+                         <ixx>1.0033842283751e-07</ixx> 
+                         <ixy>4.3e-19</ixy> 
+                         <ixz>-4.1049e-16</ixz> 
+                         <iyy>1.0033863326194e-07</iyy> 
+                         <iyz>8.8827372e-13</iyz> 
+                         <izz>7.4055516203e-10</izz> 
+                     </inertia> 
+                 </inertial> 
+ 
+                 <visual name="visual"> 
+                     <geometry> 
+                         <mesh> 
+                             <uri>model://threaded_rod_8x100/meshes/threaded_rod_8x100.stl</uri> 
+                         </mesh> 
+                     </geometry> 
+                     <material> 
+                         <script> 
+                             <uri>file://media/materials/scripts/gazebo.material</uri>
+                             <name>Gazebo/Green</name>
+                         </script>
+                     </material>
+                 </visual> 
+ 
+                 <collision name="collision"> 
+                     <geometry> 
+                         <mesh> 
+                             <uri>model://threaded_rod_8x100/meshes/threaded_rod_8x100.stl</uri> 
+                         </mesh> 
+                     </geometry> 
+                 </collision> 
+             </link> 
+         </model> 
+     </sdf>

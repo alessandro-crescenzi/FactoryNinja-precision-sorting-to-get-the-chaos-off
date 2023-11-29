@@ -16,7 +16,7 @@
           <izz>19.7979e-10</izz>
         </inertia>
       </inertial>
-      
+
       <visual name="visual">
         <geometry>
           <mesh>
@@ -30,7 +30,7 @@
           </script>
         </material>
       </visual>
-      
+
       <collision name="collision">
         <geometry>
           <mesh>

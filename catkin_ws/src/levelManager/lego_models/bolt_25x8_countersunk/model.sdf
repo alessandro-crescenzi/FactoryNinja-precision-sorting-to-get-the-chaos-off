@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<sdf version="1.4"> 
+         <model name="bolt_25x8_countersunk"> 
+             <static>true</static> 
+             <link name="link"> 
+                 <pose>0 0 0 0 0 0</pose> 
+                 <inertial> 
+                     <pose>1e-10 1.0498e-06 0.0265605148 0 0 0 </pose> 
+                     <mass>1.1e-05</mass> 
+                     <inertia> 
+                         <ixx>3.80593809653e-09</ixx> 
+                         <ixy>1.488e-17</ixy> 
+                         <ixz>2.99291721e-12</ixz> 
+                         <iyy>3.80615900167e-09</iyy> 
+                         <iyz>-9.320109e-14</iyz> 
+                         <izz>3.9795113567e-10</izz> 
+                     </inertia> 
+                 </inertial> 
+ 
+                 <visual name="visual"> 
+                     <geometry> 
+                         <mesh> 
+                             <uri>model://bolt_25x8_countersunk/meshes/bolt_25x8_countersunk.stl</uri> 
+                         </mesh> 
+                     </geometry> 
+                     <material> 
+                         <script> 
+                             <uri>file://media/materials/scripts/gazebo.material</uri>
+                             <name>Gazebo/Green</name>
+                         </script>
+                     </material>
+                 </visual> 
+ 
+                 <collision name="collision"> 
+                     <geometry> 
+                         <mesh> 
+                             <uri>model://bolt_25x8_countersunk/meshes/bolt_25x8_countersunk.stl</uri> 
+                         </mesh> 
+                     </geometry> 
+                 </collision> 
+             </link> 
+         </model> 
+     </sdf>

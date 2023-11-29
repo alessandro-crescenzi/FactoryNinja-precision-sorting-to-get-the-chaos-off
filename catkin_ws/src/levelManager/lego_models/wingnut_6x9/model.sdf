@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<sdf version="1.4"> 
+         <model name="wingnut_6x9"> 
+             <static>true</static> 
+             <link name="link"> 
+                 <pose>0 0 0 0 0 0</pose> 
+                 <inertial> 
+                     <pose>-1.84574e-05 -2.9e-07 0.0078867628 0 0 0 </pose> 
+                     <mass>8e-06</mass> 
+                     <inertia> 
+                         <ixx>3.9779170053e-10</ixx> 
+                         <ixy>-3.23836e-15</ixy> 
+                         <ixz>-2.8511706e-13</ixz> 
+                         <iyy>2.86240655577e-09</iyy> 
+                         <iyz>5.8524155e-13</iyz> 
+                         <izz>2.8800700907e-09</izz> 
+                     </inertia> 
+                 </inertial> 
+ 
+                 <visual name="visual"> 
+                     <geometry> 
+                         <mesh> 
+                             <uri>model://wingnut_6x9/meshes/wingnut_6x9.stl</uri> 
+                         </mesh> 
+                     </geometry> 
+                     <material> 
+                         <script> 
+                             <uri>file://media/materials/scripts/gazebo.material</uri>
+                             <name>Gazebo/Green</name>
+                         </script>
+                     </material>
+                 </visual> 
+ 
+                 <collision name="collision"> 
+                     <geometry> 
+                         <mesh> 
+                             <uri>model://wingnut_6x9/meshes/wingnut_6x9.stl</uri> 
+                         </mesh> 
+                     </geometry> 
+                 </collision> 
+             </link> 
+         </model> 
+     </sdf>
