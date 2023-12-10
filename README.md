@@ -26,16 +26,16 @@ The goals of this project are:
 
 ### Folder
 ```
-UR5-Pick-and-Place-Simulation/catkin_ws/
-├── levelManager
+FactoryNinja-precision-sorting-to-get-the-chaos-off/catkin_ws/src
+├── ninja_manager
 ├── vision
 ├── motion_planning
 ├── gazebo_ros_link_attacher
 ├── robot
 ```
-- `levelManager:` the task of this package is to launch the world and spawn the different bricks
-- `vision:` the task of this package is to recognize the object type and orientation of the bricks
-- `motion_planning:` the task is to move the robot and pick and place the lego
+- `ninja_manager:` the task of this package is to launch the world and spawn the different screws and nuts
+- `vision:` the task of this package is to recognize the object type (nuts and screws) and localize it
+- `motion_planning:` the task is to move the robot and pick and place the factory element
 - `gazebo_ros_link_attacher:` A gazebo plugin definable from URDF to inform a client of a collision with an object
 - `robot:` the task is to define the robot model with appropriate PID settings
 
@@ -51,12 +51,12 @@ For running each sample code:
 
 After installing the libraries needed to run the project. Clone this repo:
 ```
-git clone https://github.com/pietrolechthaler/UR5-Pick-and-Place-Simulation/
+git clone https://github.com/alessandro-crescenzi/FactoryNinja-precision-sorting-to-get-the-chaos-off/
 ```
 
 Setup the project:
 ```
-cd UR5-Pick-and-Place-Simulation/catkin_ws
+cd FactoryNinja-precision-sorting-to-get-the-chaos-off/catkin_ws
 source /opt/ros/noetic/setup.bash
 catkin build
 source devel/setup.bash
@@ -67,11 +67,12 @@ echo "source $PWD/devel/setup.bash" >> $HOME/.bashrc
 
 Launch the world
 ```
-roslaunch ninja-manager ninja_world.launch
+roslaunch ninja_manager ninja_world.launch
 ```
-Choose how many screws and nuts to spawn (up to 15):
+Choose how many screws and nuts to spawn (up to 8, if you try to spawn more than 8 objects, it is possible that they are
+not created due to insufficient space in working area):
 ```
-rosrun ninja-manager ninja-manager.py -n 5
+rosrun ninja_manager ninja-manager.py -n 5
 ```
 Start the kinematics process
 ```
