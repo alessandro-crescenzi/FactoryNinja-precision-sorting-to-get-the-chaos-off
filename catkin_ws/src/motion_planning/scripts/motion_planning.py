@@ -270,10 +270,6 @@ if __name__ == "__main__":
 
         if controller.gripper_pose[0][1] > -0.3 and controller.gripper_pose[0][0] > 0:
             controller.move_to(*DEFAULT_POS, DEFAULT_QUAT)
-
-        # increment z in order to stack lego correctly
-        # todo: edit position at every loop
-        # MODELS_INFO[model_name]["home"][2] += model_size[2] - INTERLOCKING_OFFSET
     print("Moving to Default Position")
     controller.move_to(*DEFAULT_POS, DEFAULT_QUAT)
     open_gripper()
