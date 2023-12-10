@@ -1,5 +1,5 @@
 <p align="center">
-  <h2 align="center">UR5 Pick and Place Simulation in Ros/Gazebo</h2>
+  <h2 align="center">FactoryNinja: precision sorting to get the chaos off</h2>
 
   
 </p>
@@ -45,7 +45,6 @@ UR5-Pick-and-Place-Simulation/catkin_ws/
 For running each sample code:
 - `Ros Noetic:` http://wiki.ros.org/noetic/Installation
 - `Gazebo:` https://classic.gazebosim.org/tutorials?tut=ros_installing&cat=connect_ros
-- `Yolov5` https://github.com/ultralytics/yolov5
 - `Catkin` https://catkin-tools.readthedocs.io/en/latest/
 
 ### Setup
@@ -64,22 +63,15 @@ source devel/setup.bash
 echo "source $PWD/devel/setup.bash" >> $HOME/.bashrc
 ```
 
-Clone and install [YoloV5](https://github.com/ultralytics/yolov5):
-```
-cd ~
-git clone https://github.com/ultralytics/yolov5
-cd yolov5
-pip3 install -r requirements.txt
-```
 ### Usage
 
 Launch the world
 ```
-roslaunch levelManager lego_world.launch
+roslaunch ninja-manager ninja_world.launch
 ```
-Choose the level (from 1 to 4):
+Choose how many screws and nuts to spawn (up to 15):
 ```
-rosrun levelManager levelManager.py -l [level]
+rosrun ninja-manager ninja-manager.py -n 5
 ```
 Start the kinematics process
 ```
@@ -87,15 +79,12 @@ rosrun motion_planning motion_planning.py
 ```
 Start the localization process
 ```
-rosrun vision vision.py -show
+rosrun vision ninja-vision.py -show
 ```
 - `-show` : show the results of the recognition and localization process with an image
 
-### Contributors
+### Contributor
 
-| Name                 | Github                               |
-|----------------------|--------------------------------------|
-| Davice Cerpelloni    | https://github.com/davidecerpelloni  |
-| Leonardo Collizzolli | https://github.com/leocolliz         |
-| Pietro Lechthaler    | https://github.com/pietrolechthaler  |
-| Stefano Rizzi        | https://github.com/StefanoRizzi      |
+| Name                 | Github                                                          |
+|----------------------|-----------------------------------------------------------------|
+| Alessandro Crescenzi | [alessandro-crescenzi](https://github.com/alessandro-crescenzi) |
